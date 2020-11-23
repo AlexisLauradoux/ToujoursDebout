@@ -1,0 +1,19 @@
+syntax = "proto3";
+ 
+option csharp_namespace = "JamaisCouché";
+ 
+package greet;
+ 
+service JamaisCoucheService {
+    rpc ReceiveData (SendDataRequest) returns (SendDataReply);
+}
+ 
+// The request message containing message
+message SendDataRequest {
+  string message = 1;
+}
+ 
+// The response message containing the greetings.
+message SendDataReply {
+  string message = 1;
+}

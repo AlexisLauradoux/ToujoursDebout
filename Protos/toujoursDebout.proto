@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "ToujoursDebout";
+
+package greet;
+
+// The greeting service definition.
+service ServiceToujoursDebout {
+  // Sends a greeting
+  rpc ReceiveData (ReceiveDataRequest) returns (ReceiveDataReply);
+}
+
+message ReceiveDataRequest {
+  string message = 1;
+}
+
+message ReceiveDataReply {
+  string message = 1;
+}
